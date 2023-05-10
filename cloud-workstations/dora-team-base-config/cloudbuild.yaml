@@ -1,0 +1,6 @@
+steps:
+- name: 'docker'
+  args: ['build','.','-t','gcr.io/$PROJECT_ID/dora-team-base-config']
+  dir: 'cloud-workstations/dora-team-base-config/'
+- name: 'docker'
+  args: ['push','gcr.io/$PROJECT_ID/dora-team-base-config']
