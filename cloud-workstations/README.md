@@ -25,3 +25,4 @@ gcloud beta workstations start-tcp-tunnel \
   --local-host-port=:54321 \
   stanke-20230517 22
 ```
+then, in VSCode, click the Remote Window widget, choose "connect [Current Window] to Host", and enter `user@localhost:54321`
