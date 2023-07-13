@@ -6,10 +6,10 @@ The GCP project `doradotdev` hosts a [Workstations cluster](https://console.clou
 TODO: #2 per those docs, we should "set up a [secure pipeline](https://cloud.google.com/software-supply-chain-security/docs/create-secure-image-pipeline) to automatically rebuild these images when the Cloud Workstations base image is updated"
 
 ### Helpful info
-Here's the command(s) to connect a machine to Dave's workstation, so local VS Code can use it:
+Here's the command(s) to connect to Dave's workstation from a Mac, so local VS Code can use it:
 ```sh
 # start workstation and establish tcp tunnel
-WORKSTATION_ID=stanke-20230517 \
+WORKSTATION_ID=stanke-20230517; \
 gcloud beta workstations start \
 --project=doradotdev \
 --region=us-east4 \
