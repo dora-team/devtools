@@ -8,21 +8,20 @@ TODO: #2 per those docs, we should "set up a [secure pipeline](https://cloud.goo
 ### Helpful info
 Here's the command(s) to connect a machine to Dave's workstation, so local VS Code can use it:
 ```sh
-# start workstation
+# start workstation and establish tcp tunnel
+WORKSTATION_ID=stanke-20230517 \
 gcloud beta workstations start \
 --project=doradotdev \
 --region=us-east4 \
 --cluster=dora-team-devboxes \
 --config=hugo-devboxes \
-stanke-20230517
-
-# establish tcp tunnel
+${WORKSTATION_ID} && \
 gcloud beta workstations start-tcp-tunnel \
   --project=doradotdev \
   --region=us-east4 \
   --cluster=dora-team-devboxes \
   --config=hugo-devboxes \
   --local-host-port=:54321 \
-  stanke-20230517 22
+  ${WORKSTATION_ID} 22
 ```
 then, in VSCode, click the Remote Window widget, choose "connect [Current Window] to Host", and enter `user@localhost:54321`
