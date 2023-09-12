@@ -9,7 +9,7 @@ TODO: #2 per those docs, we should "set up a [secure pipeline](https://cloud.goo
 Here's the command(s) to connect to Dave's workstation from a Mac, so local VS Code can use it:
 ```sh
 # start workstation and establish tcp tunnel
-WORKSTATION_ID=stanke-20230517; \
+WORKSTATION_ID=stanke-20230912b; \
 gcloud beta workstations start \
 --project=doradotdev \
 --region=us-east4 \
